@@ -2,7 +2,6 @@
 
 > Record & replay audio from Bluetooth devices without user awareness — for research & educational purposes only.
 
-
 <p align="center">
   <img src="https://img.shields.io/badge/Platform-Linux-blue?style=for-the-badge">
   <img src="https://img.shields.io/badge/Language-Python_3.11+-yellow?style=for-the-badge">
@@ -15,7 +14,6 @@
 This project is for security research, demo, awareness & educational purposes ONLY.
 Unauthorized Bluetooth interception may be illegal in your country.
 The author is not responsible for misuse.
-
 
 ***📌 Overview:***
 
@@ -34,7 +32,6 @@ BSAM: Seguridad en Bluetooth — RootedCON Madrid 2024
 Expanded & improved by: Karndeep Baror (Cryptonic Area)
 
 This PoC highlights weaknesses in BlueZ-based Bluetooth pairing and audio handling, especially in consumer earbuds/headsets.
-
 
 **🔧 Features***
 
@@ -71,7 +68,6 @@ Tool	Package
 bluetoothctl	bluez-utils
 btmgmt	bluez-utils
 
-
 ***PulseAudio / PipeWire 👀:***
 
 Tool	Package
@@ -80,13 +76,11 @@ pactl	libpulse
 parecord	libpulse
 paplay	libpulse
 
-
 ***Minimum 🖥️:***
 
 Python 3.11+
 Working BlueZ stack
 PulseAudio or PipeWire audio server
-
 
 ***📡 Setup:***
 
@@ -100,13 +94,13 @@ Microphone enabled (varies by model)
 
 
 **2️⃣ Ensure device is NOT already connected**
-
 Some earbuds support only one active connection.
 
 
 ***🚀 Execution:***
 
 **Step 1 — Discover target MAC**
+
 ```
 bluetoothctl
 [bluetooth]# scan on
@@ -114,10 +108,13 @@ bluetoothctl
 Copy the Bluetooth address.
 
 **Step 2 — Run BlueSpy**
+
 ``
 sudo python BlueSpy.py -a <MAC_ADDRESS>
 ```
+
 **Example:**
+
 `sudo python BlueSpy.py -a DC:23:A4:11:9B:5C`
 
 ***💻 BlueSpy will:***
@@ -131,6 +128,7 @@ sudo python BlueSpy.py -a <MAC_ADDRESS>
 🧪 Troubleshooting
 
 **Pairing Issues (btmgmt):**
+
 ```
 sudo btmgmt power on
 sudo btmgmt pairable on
@@ -138,6 +136,7 @@ sudo btmgmt connectable on
 ```
 
 **Connection Issues (bluetoothctl):**
+
 ```
 bluetoothctl
 [bluetooth]# power on
@@ -154,4 +153,8 @@ For improvements, PRs are welcome
 ***👤 Author***
 
 Made with ❤️ by *__Karndeep Baror__*  
-**LinkedIn:** [linkedin.com/in/karndeepbaror](https://www.linkedin.com/in/karndeepbaror)
+**LinkedIn:** [ Connect On Linkdin ](www.linkdin.com/in/karndeepbaror)
+
+-
+
+**Cryptonic Area** [ Join Now ](https://whatsapp.com/channel/0029Vb6plDSBKfi3qGz2fq0f)
