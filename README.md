@@ -83,9 +83,9 @@ python BlueSpy.py
 
 *1. Put earbuds/headset in:*
 
- • Discoverable mode
- • Connectable mode
- • Microphone-enabled mode
+ Discoverable mode, 
+ Connectable mode, 
+ Microphone-enabled mode
 
 *2. Ensure the device is `not connected` to another device.*
 
