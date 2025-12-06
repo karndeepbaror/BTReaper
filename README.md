@@ -25,7 +25,6 @@
 4. 🎙️ Microphone stream recording
 5. 🔊 Audio replay
 
-
 It is intended to showcase weaknesses in consumer Bluetooth audio protocols and raise security awareness.
 
 ***🔧 Features***
@@ -58,24 +57,27 @@ BlueSpy/
 ***📦 Requirements:***
 *Linux Tools:*
 
-`bluetoothctl` and `btmgmt` (from `bluez-utils` )
+ `bluetoothctl` and `btmgmt` (from `bluez-utils` )
 
-`pactl` `parecord`  `paplay` (from `libpulse` )
+ `pactl` `parecord`  `paplay` (from `libpulse` )
 
 
 ***🔩 Software Requirements:***
 
-Python 3.11+
+ Python 3.11+
 
-Working BlueZ stack
+ Working `BlueZ stack`
 
-PulseAudio or PipeWire
+ `PulseAudio` or `PipeWire`
+
+**📷 Screenshot:**
+![BlueSpy](https://github.com/user-attachments/assets/5697bcd0-9685-4e3b-9150-80a209ca294b)
 
 ***📡 Device Setup***
 ```
 git clone https://github.com/karndeepbaror/BlueSpy
 cd Blue Spy 
-cd BlueSpy
+./BlueSpy
 python BlueSpy.py
 ```
 
