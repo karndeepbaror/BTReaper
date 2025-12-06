@@ -21,12 +21,12 @@ The author is not responsible for misuse.
 
 ***📌 Overview***
 
-BlueSpy is a Proof of Concept (PoC) tool demonstrating how audio can be:
+`BlueSpy` is a Proof of Concept (PoC) tool demonstrating how audio can be:
 
-✔ Automatically paired
-✔ Connected
-✔ Recorded
-✔ Replayed
+✔ Automatically paired.
+✔ Connected.
+✔ Recorded.
+✔ Replayed.
 
 from a vulnerable Bluetooth audio device without the user noticing.
 
@@ -44,12 +44,12 @@ The project explores weaknesses in Bluetooth pairing & audio protocols, especial
 
 Feature	Description
 
-🔍 Automatic Device Discovery	Scans & identifies nearby BT audio devices
-🔐 Silent Pairing Attempt	Uses BlueZ vulnerabilities to pair
-🎧 Covert Connection	Connects even when the device isn’t expecting
-🎙 Record Audio	Captures microphone stream
-🔊 Replay Audio	Plays back captured file
-🛠 Standalone Modules	Pair / connect / record / playback scripts
+🔍 Automatic Device Discovery	Scans & identifies nearby BT audio devices.
+🔐 Silent Pairing Attempt	Uses BlueZ vulnerabilities to pair.
+🎧 Covert Connection	Connects even when the device isn’t expecting.
+🎙 Record Audio	Captures microphone stream.
+🔊 Replay Audio	Plays back captured stream.
+🛠 Standalone Modules	Pair / connect / record / playback scripts.
 
 
 ****🏗 Project Structure****
@@ -69,9 +69,8 @@ BlueSpy/
 
 This PoC depends on standard Linux Bluetooth & audio tools.
 
-****🔵 BlueZ Tools****
-
-Tool	Package
+****🔵 BlueZ Tools***oool
+olllol	Package
 
 bluetoothctl	bluez-utils
 btmgmt	bluez-utils
