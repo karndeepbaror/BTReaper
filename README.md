@@ -1,6 +1,7 @@
-***🛰️ BlueSpy — Bluetooth Audio Capture & Hacking***
+****🛰️ BlueSpy — Bluetooth Audio Capture & Hacking****
 
 > Record & replay audio from Bluetooth devices without user awareness — for research & educational purposes only.
+
 
 <p align="center">
   <img src="https://img.shields.io/badge/Platform-Linux-blue?style=for-the-badge">
@@ -8,75 +9,70 @@
   <img src="https://img.shields.io/badge/Developer-Karndeep_Baror-red?style=for-the-badge">
   <img src="https://img.shields.io/badge/Bluetooth-BlueZ_Stack-0A84FF?style=for-the-badge">
 </p>
----
 
-****⚠️ Disclaimer****
+***⚠️ Disclaimer:***
 
 This project is for security research, demo, awareness & educational purposes ONLY.
 Unauthorized Bluetooth interception may be illegal in your country.
 The author is not responsible for misuse.
 
 
-
-
-***📌 Overview***
+***📌 Overview:***
 
 `BlueSpy` is a Proof of Concept (PoC) tool demonstrating how audio can be:
 
-✔ Automatically paired.
-✔ Connected.
-✔ Recorded.
-✔ Replayed.
+> Automatically paired
+> Connected
+> Recorded
+> Replayed
 
-from a vulnerable Bluetooth audio device without the user noticing.
+from a vulnerable Bluetooth audio device without user notice.
 
-****This PoC was presented at:***"
+***🎟️Presented At:***
 
-> 🎤 BSAM: Seguridad en Bluetooth
-🏁 CryptonicArea 2025 - `Karndeep Baror`
+BSAM: Seguridad en Bluetooth — RootedCON Madrid 2024
+Expanded & improved by: Karndeep Baror (Cryptonic Area)
 
-
-
-The project explores weaknesses in Bluetooth pairing & audio protocols, especially in consumer earbuds/headsets.
+This PoC highlights weaknesses in BlueZ-based Bluetooth pairing and audio handling, especially in consumer earbuds/headsets.
 
 
-****🔧 Features****
+**🔧 Features***
 
 Feature	Description
 
 🔍 Automatic Device Discovery	Scans & identifies nearby BT audio devices.
-🔐 Silent Pairing Attempt	Uses BlueZ vulnerabilities to pair.
-🎧 Covert Connection	Connects even when the device isn’t expecting.
-🎙 Record Audio	Captures microphone stream.
-🔊 Replay Audio	Plays back captured stream.
-🛠 Standalone Modules	Pair / connect / record / playback scripts.
+🔐 Silent Pairing Attempt	Attempts pairing without user attention
+🎧 Covert Connection	Invisible connect attempt
+🎙 Audio Recording	Captures microphone stream
+🔊 Replay Audio	Plays back captured audio
+🛠 Modular Components	Pair / connect / record / playback individually runnable
 
-
-****🏗 Project Structure****
+***🏗 Project Structure:***
 ```
 BlueSpy/
 │
 ├── BlueSpy.py         → Main automation script
 ├── core.py            → Pair, connect, record & playback logic
-├── interface.py       → Colors, UI, log helpers
-├── pair.py            → Standalone pairing test
-├── connect.py         → Standalone connection test
-├── just_record.py     → Standalone recording test
+├── interface.py       → UI helpers & color output
+├── pair.py            → Standalone pairing module
+├── connect.py         → Standalone connection module
+├── just_record.py     → Standalone recording module
 └── README.md          → Documentation (this file)
 ```
 
-****📦 Requirements****
+***📦 Requirements:***
 
-This PoC depends on standard Linux Bluetooth & audio tools.
+> `BlueSpy` relies on Linux Bluetooth & audio tools.
 
-****🔵 BlueZ Tools***oool
-olllol	Package
+***BlueZ Tools 🔥***
+
+Tool	Package
 
 bluetoothctl	bluez-utils
 btmgmt	bluez-utils
 
 
-****🔊 PulseAudio / PipeWire Tools****
+***PulseAudio / PipeWire 👀:***
 
 Tool	Package
 
@@ -85,85 +81,77 @@ parecord	libpulse
 paplay	libpulse
 
 
-****Minimum:****
+***Minimum 🖥️:***
 
 Python 3.11+
-
-Working BlueZ installation
-
-PulseAudio or PipeWire
+Working BlueZ stack
+PulseAudio or PipeWire audio server
 
 
+***📡 Setup:***
 
-****📡 Setup Instructions****
+**1️⃣ Prepare the Bluetooth earbuds/headset**
 
-**1️⃣ Put earbuds/headset in:**
+*Ensure:*
 
-✔ Discoverable mode
-✔ Connectable mode
-✔ Microphone-enabled mode (varies by model)
-
-**2️⃣ Ensure the device is not already connected**
-
-Some earbuds only allow a single active connection.
+Discoverable mode
+Connectable mode
+Microphone enabled (varies by model)
 
 
-****🚀 Execution****
+**2️⃣ Ensure device is NOT already connected**
 
-**🔍 Step 1 — Discover target Bluetooth address**
+Some earbuds support only one active connection.
+
+
+***🚀 Execution:***
+
+**Step 1 — Discover target MAC**
 ```
-$ bluetoothctl
+bluetoothctl
 [bluetooth]# scan on
 ```
+Copy the Bluetooth address.
 
-Locate the MAC address of your earbuds.
-
-
-****🎯 Step 2 — Run BlueSpy****
+**Step 2 — Run BlueSpy**
+``
+sudo python BlueSpy.py -a <MAC_ADDRESS>
 ```
-$ sudo python BlueSpy.py -a <MAC_ADDRESS>
+**Example:**
+`sudo python BlueSpy.py -a DC:23:A4:11:9B:5C`
+
+***💻 BlueSpy will:***
+
+1. Attempt pairing.
+2. Connect.
+3. Record audio.
+4. Optionally replay audio.
+
+
+🧪 Troubleshooting
+
+**Pairing Issues (btmgmt):**
 ```
-
-Example:
-```
-$ sudo python BlueSpy.py -a DC:23:A4:11:9B:5C
-```
-
-***BlueSpy will automatically:***
-
-1️⃣ Attempt pairing
-2️⃣ Attempt connection
-3️⃣ Record audio
-4️⃣ Optionally replay audio
-
-****🧪 Troubleshooting****
-
-Pairing Issues (btmgmt)
-
-Run manually:
-```
-$ sudo btmgmt power on
-$ sudo btmgmt pairable on
-$ sudo btmgmt connectable on
+sudo btmgmt power on
+sudo btmgmt pairable on
+sudo btmgmt connectable on
 ```
 
-Connect Issues (bluetoothctl)
+**Connection Issues (bluetoothctl):**
 ```
-$ bluetoothctl
+bluetoothctl
 [bluetooth]# power on
 [bluetooth]# scan on
 [bluetooth]# connect <MAC>
 ```
 
-****Audio Recording Issues:****
 
-**Check available sources:**
-```
-$ pactl list sources
-```
+***⭐ Support:***
 
-**Then test recording:**
-```
-$ parecord test.wav
-```
+If this project helped you, please `⭐ Star` the repo on GitHub.
+For improvements, PRs are welcome
 
+***👤 Author***
+
+Made with ❤️ by *__Karndeep Baror__*  
+**LinkedIn:** [linkedin.com/in/karndeepbaror](https://www.linkedin.com/in/karndeepbaror)
