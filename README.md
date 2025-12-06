@@ -1,4 +1,4 @@
-****🛰️ BlueSpy — Bluetooth Audio Capture & Hacking Script****
+****🛰️ BlueSpy — Bluetooth Audio Capture & H@cking Script****
 
 <p align="center">
   <img src="https://img.shields.io/badge/Platform-Linux-blue?style=for-the-badge">
@@ -11,9 +11,11 @@
 
 ***⚠️ Legal Warning***
 
-• This project is for research & educational purposes only.
-• Unauthorized use of BlueSpy to intercept audio is illegal.
-• The author is not responsible for misuse.
+• This project is for `research & educational purposes` only.
+
+• Unauthorized use of BlueSpy to `intercept audio is illegal.`
+
+• The author is `not responsible for misuse`.
 
 ***🎯 Overview***
 
