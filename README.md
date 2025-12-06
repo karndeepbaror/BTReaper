@@ -83,12 +83,9 @@ python BlueSpy.py
 
 *1. Put earbuds/headset in:*
 
-    • Discoverable mode
-
-    • Connectable mode
-
-    • Microphone-enabled mode
-
+ • Discoverable mode
+ • Connectable mode
+ • Microphone-enabled mode
 
 *2. Ensure the device is `not connected` to another device.*
 
@@ -118,10 +115,13 @@ $ sudo python BlueSpy.py -a DC:23:A4:11:9B:5C
 
 **BlueSpy will automatically:**
 
-• Attempt pairing 🔐
-• Establish connection 📡
-• Start recording 🎙️
-• Ask to replay audio 🔊
+ • Attempt pairing 🔐
+ 
+ • Establish connection 📡
+ 
+ • Start recording 🎙️
+ 
+ • Ask to replay audio 🔊
 
 
 ***🧪 Troubleshooting:***
