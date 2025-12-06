@@ -148,13 +148,3 @@ bluetoothctl
 ***⭐ Support:***
 
 If this project helped you, please `⭐ Star` the repo on GitHub.
-For improvements, PRs are welcome
-
-***👤 Author***
-
-Made with ❤️ by *__Karndeep Baror__*  
-**LinkedIn:** [ Connect On Linkdin ](www.linkdin.com/in/karndeepbaror)
-
--
-
-**Cryptonic Area** [ Join Now ](https://whatsapp.com/channel/0029Vb6plDSBKfi3qGz2fq0f)
